@@ -1,0 +1,146 @@
+<project type="bio">
+  <property name="target.model" value="genomic"/>
+  <property name="common.os.prefix" value="common"/>
+  <property name="intermine.properties.file" value="viciamine.properties"/>
+  <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
+  <sources>
+
+    <!-- Vicia/faba/about_this_collection -->
+    <source name="Vicia-faba-description" type="lis-description" dump="true" >
+      <property name="dataSetName" value="Vicia-faba-description" />
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Vicia/faba/about_this_collection/" />
+      <property name="dataSetDescription" value="Vicia faba organism and strain information." />
+      <property name="src.data.dir" location="/home/legumista/v2/Vicia/faba/about_this_collection" />
+    </source>
+
+    <!-- Vicia/faba/genomes/Hedin2.gnm1.06GS -->
+    <source name="Hedin2.gnm1.06GS" type="lis-genome" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Vicia/faba/genomes/Hedin2.gnm1.06GS/" />
+      <property name="lis-genome.className" value="org.intermine.model.bio.Chromosome" />
+      <property name="lis-genome.includes" value="README.Hedin2.gnm1.06GS.yml,vicfa.Hedin2.gnm1.06GS.genome_main.fna.gz" />
+      <property name="src.data.dir" location="/home/legumista/v2/Vicia/faba/genomes/Hedin2.gnm1.06GS"/>
+    </source>
+    <!-- Vicia/faba/genomes/Tiffany.gnm1.M2F3 -->
+    <source name="Tiffany.gnm1.M2F3" type="lis-genome" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Vicia/faba/genomes/Tiffany.gnm1.M2F3/" />
+      <property name="lis-genome.className" value="org.intermine.model.bio.Chromosome" />
+      <property name="lis-genome.includes" value="README.Tiffany.gnm1.M2F3.yml,vicfa.Tiffany.gnm1.M2F3.genome_main.fna.gz" />
+      <property name="src.data.dir" location="/home/legumista/v2/Vicia/faba/genomes/Tiffany.gnm1.M2F3"/>
+    </source>
+
+    <!-- Vicia/faba/annotations/Hedin2.gnm1.ann1.PTNK -->
+    <source name="Hedin2.gnm1.ann1.PTNK" type="lis-annotation" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Vicia/faba/annotations/Hedin2.gnm1.ann1.PTNK/" />
+      <property name="src.data.dir" location="/home/legumista/v2/Vicia/faba/annotations/Hedin2.gnm1.ann1.PTNK"/>
+    </source>
+    <!-- Vicia/faba/annotations/Tiffany.gnm1.ann1.Y54X -->
+    <source name="Tiffany.gnm1.ann1.Y54X" type="lis-annotation" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Vicia/faba/annotations/Tiffany.gnm1.ann1.Y54X/" />
+      <property name="src.data.dir" location="/home/legumista/v2/Vicia/faba/annotations/Tiffany.gnm1.ann1.Y54X"/>
+    </source>
+
+    <!-- LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/ -->
+    <source name="legume.genefam.fam1.M65K" type="lis-genefamily" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/" />
+      <property name="src.data.dir" location="/home/legumista/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
+    </source>
+
+    <!-- LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/ -->
+    <source name="legume.genefam.fam1.M65K.trees_ML_rooted" type="lis-phylotree" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/" />
+      <property name="src.data.dir" location="/home/legumista/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
+    </source>
+
+    <!-- ######################### NON-LIS ######################### -->
+    
+    <!-- INTERPRO -->
+    <source name="interpro" type="interpro">
+      <property name="src.data.dir" location="/home/legumista/data/InterPro/"/>
+    </source>
+
+    <!-- InterPro2GO -->
+    <source name="interpro-go" type="interpro-go">
+      <property name="src.data.dir" location="/home/legumista/data/InterPro/ontology/"/>
+    </source>
+
+    <!-- Pfam terms -->
+    <source name="pfam-term" type="pfam-term">
+      <property name="src.data.dir" location="/home/legumista/data/Pfam/"/>
+    </source>
+
+    <!-- PANTHER terms -->
+    <source name="panther-term" type="panther-term">
+      <property name="src.data.dir" location="/home/legumista/data/PANTHER/"/>
+    </source>
+
+    <!-- gene ontology -->
+    <source name="go" type="go">
+      <property name="src.data.file" location="/home/legumista/data/gene-ontology/go-basic.obo"/>
+    </source>
+
+    <!-- sequence ontology -->
+    <source name="so" type="so">
+      <property name="src.data.file" location="/home/legumista/data/SO-Ontologies/Ontology_Files/so-simple.obo"/>
+    </source>
+
+    <!-- plant ontology -->
+    <source name="plant-ontology" type="obo">
+      <property name="src.data.file" location="/home/legumista/data/plant-ontology/po.obo"/>
+      <property name="ontology.prefix" value="PO"/>
+      <property name="obo.ontology.name" value="Plant Ontology"/>
+      <property name="obo.ontology.url" value="http://planteome.org/"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="The Plant Ontology (PO) is a community resource consisting of standardized terms, definitions, and logical relations describing plant structures and development stages, augmented by a large database of annotations from genomic and phenomic studies."/>
+    </source>
+
+    <!-- plant trait ontology -->
+    <source name="plant-trait-ontology" type="obo">
+      <property name="src.data.file" location="/home/legumista/data/plant-trait-ontology/to.obo"/>
+      <property name="ontology.prefix" value="TO"/>
+      <property name="obo.ontology.name" value="Plant Trait Ontology"/>
+      <property name="obo.ontology.url" value="http://www.obofoundry.org/ontology/to.html"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="A controlled vocabulary of describe phenotypic traits in plants."/>
+    </source>
+
+    <!-- cowpea crop ontology -->
+    <!-- source name="cowpea-crop-ontology" type="obo">
+      <property name="src.data.file" location="/home/legumista/data/crop-ontology/CO_340.obo"/>
+      <property name="ontology.prefix" value="CO_340"/>
+      <property name="obo.ontology.name" value="Cowpea Crop Ontology"/>
+      <property name="obo.ontology.url" value="https://www.cropontology.org/ontology/CO_340/Cowpea"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="A controlled vocabulary to describe crop traits in cowpea."/>
+    </source -->
+
+  </sources>
+
+  
+  <post-processing>
+
+    <!-- IM CORE -->
+    <post-process name="do-sources" />
+    <post-process name="create-utr-references"/>
+    <post-process name="create-intergenic-region-features"/>
+    <post-process name="populate-child-features"/>
+    <post-process name="create-gene-flanking-features"/>
+    <post-process name="transfer-sequences"/>
+
+    <!-- LIS -->
+    <post-process name="lis-create-genefamilytally"/>
+    <post-process name="lis-populate-gwasresult-markers"/>
+    <post-process name="lis-populate-marker-linkagegrouppositions"/>
+    <post-process name="lis-populate-qtl-genes"/>
+    <post-process name="lis-populate-qtl-markers"/>
+
+    <!-- VIEWS AND INDEXES -->
+    <post-process name="create-location-overlap-index" />
+    <post-process name="create-overlap-view" />
+    <post-process name="create-attribute-indexes" />
+    <post-process name="summarise-objectstore" />
+    <post-process name="create-autocomplete-index" />
+    <post-process name="create-search-index" />
+
+  </post-processing>
+  
+</project>

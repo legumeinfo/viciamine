@@ -1,0 +1,20 @@
+[submodule "libs"]
+	path = libs
+	url = https://github.com/legumeinfo/mine-libs
+	branch = 5.1.0.3
+[submodule "dbmodel/resources"]
+	path = dbmodel/resources
+	url = https://github.com/legumeinfo/mine-dbmodel-resources
+	branch = 5.1.0.3
+[submodule "webapp/src/main/java"]
+	path = webapp/src/main/java
+	url = https://github.com/legumeinfo/mine-java
+	branch = 5.1.0.3
+[submodule "webapp/src/main/resources"]
+	path = webapp/src/main/resources
+	url = https://github.com/legumeinfo/mine-webapp-resources
+	branch = 5.1.0.3
+[submodule "webapp/src/main/webapp"]
+	path = webapp/src/main/webapp
+	url = https://github.com/legumeinfo/mine-webapp
+	branch = 5.1.0.3
